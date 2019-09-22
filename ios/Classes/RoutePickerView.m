@@ -16,6 +16,8 @@
 - (instancetype)initWithFrame:(CGRect)frame viewIdentifier:(int64_t)viewId arguments:(id)args binaryMessenger:(NSObject<FlutterBinaryMessenger> *)messenger{
     if (@available(iOS 11.0, *)) {
         _routePickerView = [[AVRoutePickerView alloc]init];
+        _routePickerView.tintColor = UIColor.clearColor;
+        _routePickerView.backgroundColor = UIColor.clearColor;
     } else {
         _routePickerView = [[UIView alloc]init];
     }

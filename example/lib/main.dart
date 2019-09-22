@@ -46,15 +46,26 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.grey,
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
         body: Center(
 //          child: Text('Running on: $_platformVersion\n'),
-          child: Container(
-            width: 40,
-            height: 40,
-            child: PlatformRoutePickerView(),
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              Image.asset(
+                "assets/images/airplay.png",
+                width: 24,
+                height: 24,
+              ),
+              Container(
+                width: 24,
+                height: 24,
+                child: PlatformRoutePickerView(),
+              ),
+            ],
           ),
         ),
       ),
