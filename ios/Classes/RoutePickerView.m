@@ -18,6 +18,7 @@
         _routePickerView = [[AVRoutePickerView alloc]init];
         _routePickerView.tintColor = UIColor.clearColor;
         _routePickerView.backgroundColor = UIColor.clearColor;
+        ((AVRoutePickerView*)_routePickerView).activeTintColor = UIColor.clearColor;
     } else {
         _routePickerView = [[UIView alloc]init];
     }
